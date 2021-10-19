@@ -1,0 +1,34 @@
+---
+- name: first we need directory for the wordpress
+  command: "mkdir -p /opt/source/wordpress"
+  tags: wordpressfile
+- name: Here we are downloading the package of the wordpress
+  get_url:
+    url: https://www.wordpress.org/latest.tar.gz
+    dest: /opt/source/wordpress/
+    validate_certs: no
+  tags: wordpressfile
+- name: Here we are going to untar the file on the machine
+  unarchive:
+    src: /opt/source/wordpress/wordpress-5.8.1.tar.gz 
+    dest: /var/www/
+    copy: no
+  tags: wordpressfile
+- name: update default apache site
+  lineinfile:
+    dest: /etc/httpd/conf/httpd.conf
+    regexp: "^DocumentRoot \"/var/www/html\""
+    line: "DocumentRoot \"/var/www/wordpress\""
+    backup: yes
+  notify:
+    - restart apache
+- name: Here we are going to copy the wordpress file
+  template:
+    src: wp-config-sample.tmpl 
+    dest: /var/www/wordpress/wp-config.php
+    owner: apache
+    group: apache
+    mode: '0644'
+  notify:
+    - restart apache
+

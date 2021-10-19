@@ -1,0 +1,9 @@
+---
+- name: we are going to install wordpress on here
+  hosts: webserver
+  become: true
+  roles:
+    - apache
+    - mysql
+    - wordpress
+ 

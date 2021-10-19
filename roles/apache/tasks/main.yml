@@ -1,0 +1,42 @@
+---
+- name: We are going to install some package here for the server
+  yum: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - httpd
+    - mariadb-server
+    - mariadb
+    - php
+    - php-mysql 
+    - MySQL-python
+  tags: apache
+- name: Here we are installing the php 7 version
+  yum:
+    name: 
+      - epel-release
+      - yum-utils
+      - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+- name: We are going to insatlling the php 7 requirement package for the wordpress. Please hold on
+  command: yum-config-manager --enable remi-php73
+- name: Please wait and thannk you for your patience.
+  yum:
+    name:
+      - php
+      - php-common
+      - php-opcache
+      - php-mcrypt
+      - php-cli
+      - php-gd
+      - php-curl
+      - php-mysqlnd
+- name: starting the services
+  service:
+    name: "{{ item }}" 
+    state: started
+    enabled: yes
+  with_items:
+    - httpd
+    - mariadb 
+  tags: apache
+    

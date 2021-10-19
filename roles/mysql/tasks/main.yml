@@ -1,0 +1,13 @@
+---
+- name: Here we going to create the mysql user and the database on the server
+  mysql_db:
+    name: "{{ wp_mysql_db }}"
+    state: present
+  tags: mysql
+- name: Here we ar going to create the mysql user 
+  mysql_user:
+    name: "{{ wp_mysql_user }}"
+    password: "{{ wp_mysql_password }}"
+    priv: '*.*:ALL'
+  tags: mysql
+    

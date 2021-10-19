@@ -1,0 +1,6 @@
+---
+- name: We are here going into http on the server
+  yum: 
+    name: httpd
+    state: latest
+

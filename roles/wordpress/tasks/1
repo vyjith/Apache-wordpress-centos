@@ -1,0 +1,8 @@
+---
+- name: first we need directory for the wordpress
+  command: "mkdir -p /opt/source/wordpress
+- name: Here we are downloading the package of the wordpress
+  get_url:
+    url: https://www.wordpress.org/latest.tar.gz
+    dest: /opt/source/wordpress/
+    validate_certs: no
