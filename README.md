@@ -1,4 +1,4 @@
-# Installing wordpress using ansible on cetnos
+# Installing wordpress using ansible on cetos 7
 
 # **Description**
 -------------------------------------------------- 
