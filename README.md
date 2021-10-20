@@ -11,28 +11,29 @@ In this guide, we’ll focus on getting a Wordpress 5.7.2 instance set up on a L
 ##### Ansible Modules used:
 [Inventory](https://docs.ansible.com/ansible/2.3/intro_inventory.html) , [File](https://docs.ansible.com/ansible/2.3/list_of_files_modules.html), [Database](https://docs.ansible.com/ansible/2.3/list_of_database_modules.html), [Command](https://docs.ansible.com/ansible/2.3/list_of_commands_modules.html)
 
+# How to Use:
 
-# Edit the hosts file and add your server IP following is the one example of the hosts file entry
+First create a directory in master server. Then, clone this Github repository [apache_wordpress_cents](https://github.com/vyjith/Apache-wordpress-centos) to your maset server which is per-installed with Anisble-2. Once you cloned this repository, edit your "hosta" file [invenetory file](https://docs.ansible.com/ansible/2.3/intro_inventory.html) accordingly. 
 
+Check the connection status to your client server via:
+```
+ansible -i hosts webserver -m ping
+
+```
+Once you have established connection, then check if any syntax error in the playbook using the following command
+```
+ansible-playbook -i hosts wordpress.ym --syntax-check
+```
+If you are good to go, then execute the anible playbook
+```
+ansible-playbook -i hosts main.yml
+```
+
+Secuity Feuture
 -------------------------------------------------- 
 
-```
-[webserver]
-
-192.168.178.15
-192.168.178.16
-
-[Databse]
-
-192.168.178.18
-192.168.178.19
-```
-
-# Run the following command for running the playbook
-
-```
-anible-playbook wordpress.yml
-```
+After the installation, inorder to imporve the security, pleasae change the mysql credentials and also change the credentils in the wp-config.php file
+Additionlaly, here I have used plain mysql credentials, you can encrypt the credentials using the [ansible vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
 
 ### ⚙️ Connect with Me
 <p align="center">
