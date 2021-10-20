@@ -22,7 +22,7 @@ ansible -i hosts webserver -m ping
 ```
 Once you have established connection, then check if any syntax error in the playbook using the following command
 ```
-ansible-playbook -i hosts wordpress.ym --syntax-check
+ansible-playbook -i hosts wordpress.yml --syntax-check
 ```
 If you are good to go, then execute the anible playbook
 ```
