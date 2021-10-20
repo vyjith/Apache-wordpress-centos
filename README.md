@@ -26,7 +26,7 @@ ansible-playbook -i hosts wordpress.yml --syntax-check
 ```
 If you are good to go, then execute the anible playbook
 ```
-ansible-playbook -i hosts main.yml
+ansible-playbook -i hosts wordpress.yml
 ```
 
 Secuity Feuture
