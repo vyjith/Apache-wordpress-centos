@@ -5,6 +5,13 @@
 
 In this guide, we’ll focus on getting a Wordpress 5.7.2 instance set up on a LAMP stack (Linux, Apache, MySQL, and PHP7.2) on an Cetnos 7 server.
 
+# Prerequisites
+
+- Master server installed with [Ansible2](https://docs.ansible.com/ansible/2.3/index.html) (For your reference visit [How to install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html))
+##### Ansible Modules used:
+[Inventory](https://docs.ansible.com/ansible/2.3/intro_inventory.html) , [File](https://docs.ansible.com/ansible/2.3/list_of_files_modules.html), [Database](https://docs.ansible.com/ansible/2.3/list_of_database_modules.html), [Command](https://docs.ansible.com/ansible/2.3/list_of_commands_modules.html)
+
+
 # Edit the hosts file and add your server IP following is the one example of the hosts file entry
 
 -------------------------------------------------- 
