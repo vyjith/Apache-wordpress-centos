@@ -1,7 +1,5 @@
 # Installing wordpress using ansible on cetnos
 
-Please note that this only a created  for a testing purpose and education purpose.
-
 # **Description**
 -------------------------------------------------- 
 
