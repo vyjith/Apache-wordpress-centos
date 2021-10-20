@@ -32,8 +32,9 @@ ansible-playbook -i hosts main.yml
 Secuity Feuture
 -------------------------------------------------- 
 
-After the installation, inorder to imporve the security, pleasae change the mysql credentials and also change the credentils in the wp-config.php file
-Additionlaly, here I have used plain mysql credentials, you can encrypt the credentials using the [ansible vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
+Please update the MySQL credentials, as well as the credentials in the wp-config.php file, after the installation to increase security.wp-config.php file
+
+In addition, I've used plain mysql credentials here; however, you may encrypt the credentials using the [ansible vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
 
 ### ⚙️ Connect with Me
 <p align="center">
