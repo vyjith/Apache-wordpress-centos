@@ -3,7 +3,7 @@
 # **Description**
 -------------------------------------------------- 
 
-Here we are going to create a wordpress site using the ansible on centos machine. 
+In this guide, we’ll focus on getting a Wordpress 5.7.2 instance set up on a LAMP stack (Linux, Apache, MySQL, and PHP7.2) on an Cetnos 7 server.
 
 # Edit the hosts file and add your server IP following is the one example of the hosts file entry
 
