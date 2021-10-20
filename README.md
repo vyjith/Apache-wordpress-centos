@@ -5,8 +5,7 @@ Please note that this only a created  for a testing purpose and education purpos
 # **Description**
 -------------------------------------------------- 
 
-Here we are going to create a wordpress site using the ansible on centos machine. I belive you have a basic knowledge about the anible. Please check the following section too. 
-
+Here we are going to create a wordpress site using the ansible on centos machine. 
 
 # Edit the hosts file and add your server IP following is the one example of the hosts file entry
 
